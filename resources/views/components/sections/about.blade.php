@@ -52,7 +52,7 @@
                     </div>
                     <div>
                         <h4 class="text-[9px] text-slate-600 uppercase tracking-widest mb-1">Interests</h4>
-                        <p class="text-white text-xs italic">Gaming, Coasters</p>
+                        <p class="text-white text-xs italic">Gaming, Roller Coasters</p>
                     </div>
                 </div>
 
