@@ -2,10 +2,32 @@
     <div x-data="{ 
             active: 'launch', 
             sections: @js(collect($sections)->pluck('id')),
-            next() { let idx = this.sections.indexOf(this.active); if(idx < this.sections.length - 1) this.active = this.sections[idx + 1]; },
-            prev() { let idx = this.sections.indexOf(this.active); if(idx > 0) this.active = this.sections[idx - 1]; }
+            lastScroll: 0,
+            next() { 
+                let idx = this.sections.indexOf(this.active); 
+                if(idx < this.sections.length - 1) this.active = this.sections[idx + 1]; 
+            },
+            prev() { 
+                let idx = this.sections.indexOf(this.active); 
+                if(idx > 0) this.active = this.sections[idx - 1]; 
+            },
+            handleWheel(e) {
+                let now = Date.now();
+                // Prevent rapid-fire switching (200ms cooldown)
+                if (now - this.lastScroll < 200) return;
+                
+                if (e.deltaY > 0) {
+                    this.next();
+                    this.lastScroll = now;
+                } else if (e.deltaY < 0) {
+                    this.prev();
+                    this.lastScroll = now;
+                }
+            }
          }" 
-         @keydown.right.window="next()" @keydown.left.window="prev()"
+         @keydown.right.window="next()" 
+         @keydown.left.window="prev()"
+         @wheel.window="handleWheel($event)"
          class="h-screen w-screen flex flex-col relative overflow-hidden">
 
         <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
@@ -28,16 +50,13 @@
 
         <main class="flex-1 relative flex items-center justify-start pl-24 md:pl-48 pr-12 z-10">
             <x-sections.title/>
-
             <x-sections.about />
-            
             <x-sections.projects :projects="$projects" />
-            
             <x-sections.skills :skills="$skills" />
         </main>
 
         <footer class="p-8 text-center text-[10px] tracking-[1em] text-slate-600 uppercase">
-            Arrow Keys to Control Track
+            Scroll or Arrow Keys to Control Track
         </footer>
     </div>
 </x-layout>
