@@ -14,7 +14,7 @@ class ProjectController extends Controller
             'desc' => 'A bespoke, component-based portfolio built with Laravel and Alpine.js.',
             'long_desc' => 'This site was designed to move away from standard web patterns and move toward a Futuristic looking interface. The technical goal was to implement an almost Single Page Application (SPA) feel using only Blade and Alpine.js, ensuring high performance and deep modularity through Blade Components.',
             'stack' => ['Laravel', 'Alpine.js', 'Tailwind CSS'],
-            'repo' => 'https://github.com/thijsderogee/portfolio-v3',
+            'repo' => 'https://github.com/KaketoeYT/portfolio',
             'url' => 'https://thijsderogee.nl',
         ];
 
