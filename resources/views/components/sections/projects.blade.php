@@ -23,9 +23,13 @@
                         </a>
                         
                         <div class="flex gap-3">
-                            @foreach(array_slice($p['stack'], 0, 3) as $tech)
-                                <span class="text-[9px] text-slate-600 uppercase font-mono">{{ $tech }}</span>
-                            @endforeach
+                            <div class="flex flex-wrap gap-2">
+                                @foreach($p['stack'] as $tech)
+                                    <span class="px-2 py-1 bg-indigo-500/5 text-indigo-400/80 border border-indigo-500/20 text-[9px] font-mono tracking-widest uppercase">
+                                        {{ $tech }}
+                                    </span>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -36,17 +40,33 @@
             <h3 class="text-[9px] heading-font text-slate-600 uppercase tracking-[0.5em] mb-2 px-4">Select Module</h3>
             
             @foreach($projects as $idx => $p)
+                @php
+                    // Check if this is the portfolio project to apply the "stickout" style
+                    $isPortfolio = str_contains(strtolower($p['name']), 'portfolio');
+                @endphp
+
                 <button @click="current = {{ $idx }}" 
-                        :class="current === {{ $idx }} ? 'border-indigo-500 bg-indigo-500/5 text-white shadow-[0_0_15px_rgba(99,102,241,0.1)]' : 'border-slate-800 text-slate-500'"
+                        :class="current === {{ $idx }} 
+                            ? '{{ $isPortfolio ? 'border-indigo-400/50 bg-indigo-500/10 text-white shadow-[0_0_20px_rgba(99,102,241,0.15)]' : 'border-indigo-500 bg-indigo-500/5 text-white shadow-[0_0_15px_rgba(99,102,241,0.1)]' }}' 
+                            : '{{ $isPortfolio ? 'border-indigo-500/20 bg-indigo-500/5 text-indigo-400/60' : 'border-slate-800 text-slate-500' }}'"
                         class="group relative text-left p-4 border transition-all hover:border-slate-600 uppercase text-[10px] font-bold tracking-tighter overflow-hidden">
                     
+                    @if($isPortfolio)
+                        <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-indigo-500/40 group-hover:border-indigo-500 transition-colors"></div>
+                    @endif
+
                     <div x-show="current === {{ $idx }}" 
                          class="absolute left-0 top-0 h-full w-[2px] bg-indigo-500"></div>
                     
                     <div class="flex justify-between items-center">
-                        <span>{{ $p['name'] }}</span>
+                        <div class="flex flex-col">
+                            @if($isPortfolio)
+                                <span class="text-[7px] font-mono text-indigo-500/50 mb-1">SYSTEM//</span>
+                            @endif
+                            <span>{{ $p['name'] }}</span>
+                        </div>
                         <span class="text-[8px] opacity-30 group-hover:opacity-100 transition-opacity font-mono">
-                            0{{ $idx + 1 }}
+                            {{ $isPortfolio ? 'META' : '0' . ($idx + 1) }}
                         </span>
                     </div>
                 </button>
