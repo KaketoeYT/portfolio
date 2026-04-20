@@ -7,7 +7,7 @@
                 <div class="p-8 border border-slate-800 bg-slate-900/10 rounded-sm relative group overflow-hidden">
                     <div class="absolute inset-0 bg-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <p class="text-slate-500 text-sm italic leading-relaxed relative z-10">
-                        "Code is only as strong as its weakest link. I don't leave weak links."
+                        Theres always more to learn "It's not a lake, it's an ocean" - Alan Wake
                     </p>
                 </div>
             </div>
