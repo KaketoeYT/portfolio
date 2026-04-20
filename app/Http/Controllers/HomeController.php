@@ -75,17 +75,18 @@ class HomeController extends Controller
         ];
 
         $skills = [
-            ['name' => 'C#', 'percent' => '65'],
-            ['name' => 'Unity', 'percent' => '65'],
-            ['name' => 'Unreal', 'percent' => '65'],
-            ['name' => 'PHP', 'percent' => '65'],
+            ['name' => 'C#', 'percent' => '70'],
+            ['name' => 'Unity', 'percent' => '55'],
+            ['name' => 'Unreal', 'percent' => '50'],
+            ['name' => 'PHP', 'percent' => '80'],
             ['name' => 'HTML', 'percent' => '65'],
-            ['name' => 'CSS', 'percent' => '65'],
-            ['name' => 'Laravel', 'percent' => '55'],
-            ['name' => 'JavaScript', 'percent' => '65'],
-            ['name' => 'Three.js', 'percent' => '65'],
-            ['name' => 'SQL', 'percent' => '65'],
-            ['name' => 'Python', 'percent' => '25'],
+            ['name' => 'CSS', 'percent' => '70'],
+            ['name' => 'Laravel', 'percent' => '70'],
+            ['name' => 'JavaScript', 'percent' => '60'],
+            ['name' => 'Three.js', 'percent' => '35'],
+            ['name' => 'Alpine.js', 'percent' => '15'],
+            ['name' => 'SQL', 'percent' => '75'],
+            ['name' => 'Python', 'percent' => '40'],
         ];
 
         return view('home', compact('sections', 'projects', 'skills'));
