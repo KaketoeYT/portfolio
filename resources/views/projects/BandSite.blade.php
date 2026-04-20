@@ -66,9 +66,16 @@
                        class="block w-full py-4 bg-white text-black font-bold text-center uppercase text-[10px] tracking-widest hover:bg-indigo-600 hover:text-white transition-all shadow-xl">
                         Launch Project Site
                     </a>
-
                 </div>
             </div>
+
+            <div class="mt-20 aspect-video w-full bg-slate-900/50 border border-slate-800 flex items-center justify-center group overflow-hidden relative">
+                <div class="absolute inset-0 bg-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-slate-700 heading-font text-xs uppercase tracking-[1em] group-hover:text-indigo-500/50 transition-colors">
+                    Project Visuals Coming Soon
+                </span>
+            </div>
+            
         </div>
     </div>
 </x-layout>
