@@ -33,7 +33,7 @@
         <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
 
         <div class="fixed top-0 left-0 h-[2px] bg-indigo-500 shadow-[0_0_10px_#6366f1] transition-all duration-700 z-[100]"
-             :style="'width: ' + ((sections.indexOf(active) + 1) / sections.length * 100) + '%'"></div>
+             :style="'width: ' + (sections.indexOf(active) / (sections.length - 1) * 100) + '%'"></div>
 
         <nav class="fixed left-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-10">
             @foreach($sections as $s)
