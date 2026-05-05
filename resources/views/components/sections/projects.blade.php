@@ -19,7 +19,7 @@
                     <div class="flex items-center gap-6">
                         <a href="/projects/{{ $p['slug'] }}" 
                            class="inline-flex items-center gap-2 text-indigo-400 font-bold uppercase text-[10px] tracking-[0.2em] border-b border-indigo-400/20 pb-2 hover:border-indigo-400 hover:text-white transition-all">
-                            Technical Analysis →
+                            More info →
                         </a>
                         
                         <div class="flex gap-3">
