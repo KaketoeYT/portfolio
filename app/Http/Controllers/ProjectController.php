@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+    // Portfolio
     public function portfolio()
     {
         $project = [
@@ -21,6 +22,7 @@ class ProjectController extends Controller
         return view('projects.Portfolio', compact('project'));
     }
 
+    // Cargo Grid
     public function cargoGrid()
     {
         $project = [
@@ -30,12 +32,15 @@ class ProjectController extends Controller
             Built for trucking simulators and puzzle games, it handles real-time collision checks, dynamic grid resizing, and "best-fit" logic for complex cargo shapes.',
 
             'stack' => ['Unity', 'C#'],
+            'features' => [],
             'repo' => 'https://github.com/KaketoeYT/project_package',
+            'url' => '#',
         ];
 
         return view('projects.CargoGrid', compact('project'));
     }
 
+    // Band Site
     public function bandsite()
     {
         $project = [
@@ -53,6 +58,7 @@ class ProjectController extends Controller
         return view('projects.BandSite', compact('project'));
     }
 
+    // Character Select
     public function characterselect()
     {
         $project = [
@@ -63,12 +69,13 @@ class ProjectController extends Controller
             'stack' => ['Three.js', 'GLSL', 'Laravel', 'Vite'],
             'features' => ['Responsive Design', 'Asset Optimization', 'Custom Typography'],
             'repo' => 'https://github.com/KaketoeYT/character-select',
-            'url' => 'https://github.com/KaketoeYT/deadlock-heroselect',
+            'url' => 'http://characterselect.thijsderogee.nl/',
         ];
 
         return view('projects.CharacterSelect', compact('project'));
     }
 
+    // Browser card game
     public function mtgbrowser()
     {
         $project = [
@@ -78,13 +85,14 @@ class ProjectController extends Controller
             utilizing the PeerJS library for real-time multiplayer functionality. It requests all the cards from the Scryfall API and stores them in a local database.',
             
             'stack' => ['JavaScript', 'PeerJS', 'API', 'HTML', 'CSS'],
-            'repo' => '#',
-            'url' => 'https://github.com/KaketoeYT/mtgweb',
+            'repo' => 'https://github.com/KaketoeYT/mtgweb',
+            'url' => 'http://mtgweb.thijsderogee.nl/',
         ];
 
         return view('projects.MTGBrowser', compact('project'));
     }
 
+    // Api optimisation
     public function apioptimisation()
     {
         $project = [
@@ -94,8 +102,8 @@ class ProjectController extends Controller
             I implemented a multi-layered caching strategy and request-throttling to minimize server load while maintaining sub-second route calculations.',
             
             'stack' => ['Laravel', 'API'],
-            'repo' => '#',
-            'url' => 'https://github.com/KaketoeYT/sc-routeplanner',
+            'repo' => 'https://github.com/KaketoeYT/sc-routeplanner',
+            'url' => 'http://scroutes.thijsderogee.nl/',
         ];
 
         return view('projects.APIOptimisation', compact('project'));
