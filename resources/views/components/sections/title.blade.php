@@ -4,7 +4,7 @@
             Thijs<br><span class="text-indigo-500">Derogee</span>
         </h1>
         <p class="text-slate-500 text-lg md:text-xl max-w-xl border-l border-indigo-500/30 pl-6 mb-12">
-            Full-Stack Developer focused on high-performance systems and immersive web logic.
+            Full-stack developer building fast, interactive websites and smooth backend systems.
         </p>
 
         <div class="flex flex-wrap gap-4 items-center">
