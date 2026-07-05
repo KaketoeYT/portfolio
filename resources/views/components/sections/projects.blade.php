@@ -1,5 +1,13 @@
 <template x-if="active === 'projects'">
-    <div x-data="{ current: 0 }" x-transition class="w-full flex flex-col md:flex-row gap-12 lg:gap-20">
+    <div x-data="{ 
+        current: (() => {
+            const slug = new URLSearchParams(window.location.search).get('project');
+            const slugs = @js(collect($projects)->pluck('slug'));
+            const idx = slugs.indexOf(slug);
+            return idx !== -1 ? idx : 0;
+        })()
+     }" 
+     x-transition class="w-full flex flex-col md:flex-row gap-12 lg:gap-20">
         
         <div class="flex-1 min-w-0"> 
             @foreach($projects as $idx => $p)

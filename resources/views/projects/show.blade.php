@@ -1,7 +1,7 @@
 <x-layout>
     <div class="min-h-screen bg-[#020617] selection:bg-indigo-500/30">
         <div class="max-w-5xl mx-auto px-8 py-20">
-            <a href="/" class="text-indigo-400 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-white transition flex items-center gap-2 mb-16">
+            <a href="{{ route('home.index', ['view' => 'projects', 'project' => $project['slug']]) }}" class="text-indigo-400 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-white transition flex items-center gap-2 mb-16">
                 ← Return to Dashboard
             </a>
 

@@ -33,6 +33,7 @@ class ProjectController extends Controller
     public function cargoGrid()
     {
         $project = [
+            'slug' => 'cargogrid',
             'name' => 'Cargo Grid',
 
             'long_desc' => 'Cargo Grid is a high-performance grid system designed for precise, interactive 3D object placement. 
@@ -64,6 +65,7 @@ class ProjectController extends Controller
     public function bandsite()
     {
         $project = [
+            'slug' => 'bandsite',
             'name' => 'Band Site',
 
             'long_desc' => 'A high-impact, minimalist fan portal for the band "Gore." The project focuses on a "Brutalist" aesthetic, 
@@ -95,6 +97,7 @@ class ProjectController extends Controller
     public function characterselect()
     {
         $project = [
+            'slug' => 'characterselect',
             'name' => 'Character Select',
 
             'long_desc' => 'A Three.js recreation of the Deadlock character select screen.',
@@ -125,6 +128,7 @@ class ProjectController extends Controller
     public function mtgbrowser()
     {
         $project = [
+            'slug' => 'mtgbrowser',
             'name' => 'Browser Card Game',
 
             'long_desc' => 'This project served as my deep dive into Vanilla JavaScript. I built a simplified Magic: The Gathering game that runs entirely in the browser, 
@@ -158,6 +162,7 @@ class ProjectController extends Controller
     public function apioptimisation()
     {
         $project = [
+            'slug' => 'apioptimisation',
             'name' => 'API Optimisation',
 
             'long_desc' => 'This project was a challenge in data synchronization. To provide real-time hauling routes, I had to fetch prices from massive community APIs. 

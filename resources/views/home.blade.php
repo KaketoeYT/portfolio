@@ -1,6 +1,6 @@
 <x-layout>
     <div x-data="{ 
-            active: 'launch', 
+            active: new URLSearchParams(window.location.search).get('view') || 'launch', 
             sections: @js(collect($sections)->pluck('id')),
             lastScroll: 0,
             next() { 
