@@ -1,7 +1,8 @@
 <x-layout>
     <div class="min-h-screen bg-[#020617] selection:bg-indigo-500/30">
         <div class="max-w-5xl mx-auto px-8 py-20">
-            <a href="{{ route('home.index', ['view' => 'projects', 'project' => $project['slug']]) }}" class="text-indigo-400 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-white transition flex items-center gap-2 mb-16">
+            <a href="{{ route('home.index', ['view' => 'projects', 'project' => $project['slug']]) }}"
+                class="text-indigo-400 text-[10px] font-bold uppercase tracking-[0.3em] hover:text-white transition flex items-center gap-2 mb-16">
                 ← Return to Dashboard
             </a>
 
@@ -23,7 +24,7 @@
                             </h3>
 
                             <ul class="space-y-3 text-sm text-slate-500">
-                                @foreach($project['features'] as $feature)
+                                @foreach ($project['features'] as $feature)
                                     <li class="flex items-center gap-3">
                                         <span class="w-1 h-1 bg-indigo-500"></span>
                                         {{ $feature }}
@@ -53,8 +54,9 @@
                         </h4>
 
                         <div class="flex flex-wrap gap-2">
-                            @foreach($project['stack'] as $tech)
-                                <span class="px-3 py-1 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-[10px] font-mono">
+                            @foreach ($project['stack'] as $tech)
+                                <span
+                                    class="px-3 py-1 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-[10px] font-mono">
                                     {{ $tech }}
                                 </span>
                             @endforeach
@@ -67,25 +69,27 @@
                         </h4>
 
                         <a href="{{ $project['repo'] }}" target="_blank"
-                           class="group flex items-center justify-between text-xs font-bold text-white hover:text-indigo-400 transition">
+                            class="group flex items-center justify-between text-xs font-bold text-white hover:text-indigo-400 transition">
                             VIEW REPOSITORY
                             <span class="group-hover:translate-x-1 transition">→</span>
                         </a>
                     </div>
 
-                    <a href="{{ $project['url'] }}"
-                       target="_blank"
-                       class="block w-full py-4 bg-white text-black font-bold text-center uppercase text-[10px] tracking-widest hover:bg-indigo-600 hover:text-white transition-all shadow-xl">
+                    <a href="{{ $project['url'] }}" target="_blank"
+                        class="block w-full py-4 bg-white text-black font-bold text-center uppercase text-[10px] tracking-widest hover:bg-indigo-600 hover:text-white transition-all shadow-xl">
                         Launch Project Site
                     </a>
 
                 </div>
             </div>
 
-            <div class="mt-20 aspect-video w-full bg-slate-900/50 border border-slate-800 flex items-center justify-center group overflow-hidden relative">
-                <div class="absolute inset-0 bg-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div
+                class="mt-20 aspect-video w-full bg-slate-900/50 border border-slate-800 flex items-center justify-center group overflow-hidden relative">
+                <div class="absolute inset-0 bg-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
 
-                <span class="text-slate-700 heading-font text-xs uppercase tracking-[1em] group-hover:text-indigo-500/50 transition-colors">
+                <span
+                    class="text-slate-700 heading-font text-xs uppercase tracking-[1em] group-hover:text-indigo-500/50 transition-colors">
                     Project Visuals Coming Soon
                 </span>
             </div>
