@@ -26,7 +26,9 @@
             }
          }" 
          @keydown.right.window="next()" 
+         @keydown.down.window="next()" 
          @keydown.left.window="prev()"
+         @keydown.up.window="prev()"
          @wheel.window="handleWheel($event)"
          class="h-screen w-screen flex flex-col relative overflow-hidden">
 
